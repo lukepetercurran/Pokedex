@@ -20,7 +20,21 @@
 		        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle-Navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-white" href="#">Your Favorites</a>
+				</li>
+			</ul>
+			<form class="d-flex">
+				<input id="userPokemonInput" class="form-control me-2" type="search" placeholder="Search Pokemon"
+				       aria-label="Search">
+				<button id="userPokemonInputBtn" class="btn btn-outline-primary" type="submit">Search</button>
+			</form>
+		</div>
 	</div>
 </nav>
 <!--Pokedex Sucka, Gen 1 roolz-->
