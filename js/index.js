@@ -20,6 +20,7 @@ const colors = {
     flying: '#F5F5F5',
     fighting: '#E6E0D4',
     normal: '#F5F5F5'
+}
 
     const fetchPokemon = () => {
         const promises = []; // Start off with an empty array of promises
@@ -40,4 +41,35 @@ const colors = {
             displayPokemon(pokemon, "pokedex")
         }))
     };
+
+const displayPokemon = ((pokemon, divId) => {
+    console.log(pokemon)
+
+    const pokemonHTMLString = pokemon.map(pokeman =>
+        `
+        <div class="col-sm-12 col-med-6 col-lg-4 col-xl-4 col-xxl-2">
+            <div id="${pokeman.name}" class="card card-flip card-front mb-2 shadow-lg pokemonCard" style="background-color: ${pokeman.color} ">
+                <!--        <div class="card-front">-->
+                <img class="card-img-top" src="${pokeman.image}"/>
+                <h4 class="card-title text-center">${pokeman.id}. ${pokeman.name}</h4>
+                <div class="row text-center">
+                    <div class="col-12 card-text text-center m-2">Type: ${pokeman.type}
+                    </div>
+                </div>
+                <!--        </div> -->
+                <div class="card card-back mb-2 shadow-lg pokemonCard" style="background-color: ${pokeman.color}">
+                    <img class="card-img mb-0 pb-0" src="${pokeman.image2}"/>
+                    <h4 class="card-title m-0 p-0 text-center">Ability:</h4>
+                    <div class="row text-center">
+                        <div class="col-8 card-text text-center m-2">${pokeman.ability}
+                        </div>
+                        <div class="col-3 my-auto">
+                            <i id="${pokeman.id}" class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            `)
+
 }
