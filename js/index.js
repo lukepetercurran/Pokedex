@@ -72,4 +72,26 @@ const displayPokemon = ((pokemon, divId) => {
         </div>
             `)
 
+    $('#' + divId).html(pokemonHTMLString)
+})
+
+//Used to capitalize letters for data from API.
+const capitalizeFirstLetter = (string => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+})
+
+$("#userPokemonInputBtn").click(function (e) {
+    e.preventDefault();
+    getPokemonData();
+    $('#pokedex').hide()
+})
+
+$("#userPokemonInput").on('keypress', function (e) {
+    if (e.keyCode === 13) {
+        e.preventDefault();
+        getPokemonData()
+        $('#pokedex').hide()
+    }
+});
+
 }
