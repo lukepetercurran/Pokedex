@@ -1,0 +1,17 @@
+.pokemonCard {
+    background-color: white;
+    border-radius: 5%;
+
+}
+
+#btn-back-to-top {
+    position: fixed;
+    bottom: 3px;
+    right: 3px;
+    display: none;
+}
+
+/*Favorite Button*/
+.red {
+    color: red;
+}
