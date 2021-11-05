@@ -43,3 +43,6 @@ body{
 .card-flip:hover .card-front {
     transform: rotateY(-180deg);
 }
+.card-flip:hover .card-back {
+    transform: rotateY(0deg);
+}
