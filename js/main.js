@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
     fetchPokemon();
-    // $('.pokemonSearchCard').hide()
+    $('.pokemonSearchCard').hide()
 });
 
 const colors = {
@@ -93,6 +93,7 @@ $("#userPokemonInput").on('keypress', function (e) {
         $('#pokedex').hide()
     }
 });
+
 function getPokemonData() {
     let userPokemonInput = $("#userPokemonInput").val()
     const promises = [];
