@@ -10,10 +10,10 @@
     display: none;
 }
 
-/*Favorite Button*/
 .red {
     color: red;
 }
+
 body{
     font-family: 'Cairo', sans-serif;
 }
@@ -42,6 +42,7 @@ body{
 .card-flip:hover .card-front {
     transform: rotateY(-180deg);
 }
+
 .card-flip:hover .card-back {
     transform: rotateY(0deg);
 }
