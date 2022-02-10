@@ -23,18 +23,23 @@ const colors = {
 }
 
     const fetchPokemon = () => {
-        const promises = []; // Start off with an empty array of promises
-        for (let i = 1; i <= 898; i++) { //Max is 898.
+        const promises = [];
+        // Start off with an empty array of promises
+        for (let i = 1; i <= 898; i++) {
+            //Max is 898.
             const pokemonUrl = `https://pokeapi.co/api/v2/pokemon/${i}`;
-            promises.push(fetch(pokemonUrl).then((res) => res.json())); //For each one of our requests we push them to promise array
+            promises.push(fetch(pokemonUrl).then((res) => res.json()));
+            //For each one of our requests we push them to promise array
         }
         Promise.all(promises).then((results => {
-            const pokemon = results.map((data) => ({ //iterating through each result, going to get a reference to each one of those. With each one of those it then converts it to our built object
+            const pokemon = results.map((data) => ({
+                //iterating through each result, going to get a reference to each one of those. With each one of those it then converts it to our built object
                 name: capitalizeFirstLetter(data.species.name),
                 id: data.id,
                 image: data.sprites['front_default'],
                 image2: data.sprites['front_shiny'],
-                type: capitalizeFirstLetter(data.types[0].type.name), //This grabs each name in type and creates a new array. It then joins them into a string.
+                type: capitalizeFirstLetter(data.types[0].type.name),
+                //This grabs each name in type and creates a new array. It then joins them into a string.
                 color: colors[data.types[0].type.name],
                 ability: capitalizeFirstLetter(data.abilities[0].ability.name)
             }));
