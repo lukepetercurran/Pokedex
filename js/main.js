@@ -112,8 +112,7 @@ function getPokemonData() {
             type: capitalizeFirstLetter(data.types[0].type.name), //This grabs each name in type and creates a new array. It then joins them into a string.
             color: colors[data.types[0].type.name],
             // ability: capitalizeFirstLetter(data.abilities[0].ability.name)
-            location: capitalizeFirstLetter(data.location_area[])
-
+            location: capitalizeFirstLetter(data.location[0].location_area)
         }));
         displayPokemon(pokemon, "userPokemonSearchDisplay")
     }))
