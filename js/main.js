@@ -41,7 +41,7 @@ const colors = {
                 type: capitalizeFirstLetter(data.types[0].type.name),
                 //This grabs each name in type and creates a new array. It then joins them into a string.
                 color: colors[data.types[0].type.name],
-                ability: capitalizeFirstLetter(data.abilities[0].ability.name)
+                habitat: capitalizeFirstLetter(data.location.name)
             }));
             displayPokemon(pokemon, "pokedex")
         }))
@@ -64,9 +64,10 @@ const displayPokemon = ((pokemon, divId) => {
                 <!--        </div> -->
                 <div class="card card-back mb-2 shadow-lg pokemonCard" style="background-color: ${pokeman.color}">
                     <img class="card-img mb-0 pb-0" src="${pokeman.image2}"/>
-                    <h4 class="card-title m-0 p-0 text-center">Ability:</h4>
+                    <h4 class="card-title m-0 p-0 text-center">Habitat:</h4>
                     <div class="row text-center">
-                        <div class="col-8 card-text text-center m-2">${pokeman.ability}
+                        <div class="col-8 card-text text-center m-2">${pokeman.habitat}
+
                         </div>
                         <div class="col-3 my-auto">
                             <i id="${pokeman.id}" class="fas fa-heart"></i>
@@ -111,8 +112,7 @@ function getPokemonData() {
             image: data.sprites['front_default'],
             type: capitalizeFirstLetter(data.types[0].type.name), //This grabs each name in type and creates a new array. It then joins them into a string.
             color: colors[data.types[0].type.name],
-            // ability: capitalizeFirstLetter(data.abilities[0].ability.name)
-            location: capitalizeFirstLetter(data.location[0].location_area)
+            habitat: capitalizeFirstLetter(data.location.name)
         }));
         displayPokemon(pokemon, "userPokemonSearchDisplay")
     }))
@@ -142,7 +142,7 @@ function localStoragePokemon(localStorageArrayElementValue) {
             image: data.sprites['front_default'],
             type: capitalizeFirstLetter(data.types[0].type.name), //This grabs each name in type and creates a new array. It then joins them into a string.
             color: colors[data.types[0].type.name],
-            ability: capitalizeFirstLetter(data.abilities[0].ability.name)
+            habitat: capitalizeFirstLetter(data.location.name)
         }));
         displayPokemon(pokemon, "userFavoritePokemon")
     }))
