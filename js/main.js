@@ -6,20 +6,22 @@ $(document).ready(function () {
 });
 
 const colors = {
-    fire: '#FDDFDF',
-    grass: '#DEFDE0',
-    electric: '#FCF7DE',
-    water: '#DEF3FD',
-    ground: '#f4e7da',
-    rock: '#d5d5d4',
-    fairy: '#fceaff',
-    poison: '#98d7a5',
-    bug: '#f8d5a3',
-    dragon: '#97b3e6',
-    psychic: '#eaeda1',
-    flying: '#F5F5F5',
-    fighting: '#E6E0D4',
-    normal: '#F5F5F5'
+    fire: '#f08030',
+    grass: '#78c850',
+    electric: '#f8d030',
+    water: '#6890f0',
+    ground: '#e0c068',
+    rock: '#b8a038',
+    fairy: '#EE99ac',
+    poison: '#a040a0',
+    bug: '#a8ba20',
+    dragon: '#7038f8',
+    psychic: '#f85888',
+    flying: '#90AAD7',
+    fighting: '#c03028',
+    normal: '#a8a878',
+    ghost: '#705898',
+    ice: '#98d8d8'
 }
 
     const fetchPokemon = () => {
